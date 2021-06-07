@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="umn.ac.id.fbtest.ui.product.ProductFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_product" />
+
+    <fragment
+        android:id="@+id/nav_member"
+        android:name="umn.ac.id.fbtest.ui.member.MemberFragment"
+        android:label="Member"
+        tools:layout="@layout/fragment_member" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="umn.ac.id.fbtest.ui.logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="umn.ac.id.fbtest.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="umn.ac.id.fbtest.ui.setting.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+</navigation>

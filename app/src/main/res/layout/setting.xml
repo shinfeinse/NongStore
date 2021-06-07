@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pengaturan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/atscrt"
+        android:layout_width="413dp"
+        android:layout_height="45dp"
+        android:background="@drawable/setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="PENGATURAN"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/kotakprofile"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="28dp"
+        android:background="#FF6600"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atscrt"
+        app:srcCompat="@drawable/kotak_kosong" />
+
+    <ImageView
+        android:id="@+id/kotakpembayaran"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="100dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FF6600"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/atscrt"
+        app:srcCompat="@drawable/kotak_kosong" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="185dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="112dp"
+        android:gravity="center"
+        android:text="PROFILE"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/kotakprofile"
+        app:layout_constraintTop_toBottomOf="@+id/atscrt" />
+
+    <Button
+        android:id="@+id/pembayaran"
+        android:layout_width="251dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+        android:text="METODE PEMBAYARAN"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kotakprofile" />
+
+    <ImageView
+        android:id="@+id/kotakabout"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FF6600"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kotakpembayaran"
+        app:srcCompat="@drawable/kotak_kosong" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="173dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="116dp"
+        android:gravity="center"
+        android:text="ABOUT"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/kotakabout"
+        app:layout_constraintTop_toBottomOf="@+id/kotakpembayaran" />
+
+    <Switch
+        android:id="@+id/tombolnotifikasi"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#FF6600"
+        android:buttonTint="#FFFFFF"
+        android:text="NOTIFIKASI"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="365dp" />
+
+    <Switch
+        android:id="@+id/darkmode"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:text="DARK MODE"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tombolnotifikasi" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="413dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#FF6600"
+        android:text="LOG OUT"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/darkmode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

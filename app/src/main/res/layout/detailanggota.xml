@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/kotakatas"
+            android:layout_width="584dp"
+            android:layout_height="69dp"
+            android:layout_marginBottom="2656dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/kotakatas" />
+
+        <TextView
+            android:id="@+id/Anggota"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginEnd="-2dp"
+            android:gravity="center"
+            android:text="Anggota"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="7dp" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="146dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Anggota"
+            app:srcCompat="@drawable/kevin"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Nama : Kevin Andreejan Susanto"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="165dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota2"
+            app:srcCompat="@drawable/ahmad"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota3"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Nama : Ahmad Havizar Ilham Wijaya "
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="165dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota4"
+            app:srcCompat="@drawable/regina"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota6"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Nama : Regina Fransisca Louisa "
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="165dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota9"
+            app:srcCompat="@drawable/araffi"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota8"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Nama : Araffi Luthfian Harits"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="165dp"
+            android:layout_height="196dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota7"
+            app:srcCompat="@drawable/danang"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota5"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Nama : Danang Prasetya Herbumi"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota2"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="NIM : 00000032927"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota4"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="NIM : 00000033620"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota7"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="NIM : 00000029656"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota6"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota9"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="NIM : 00000033144"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/anggota10"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="NIM : 00000033232"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/anggota8"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
