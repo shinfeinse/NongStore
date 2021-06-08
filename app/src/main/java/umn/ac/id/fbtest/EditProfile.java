@@ -96,13 +96,11 @@ public class EditProfile extends AppCompatActivity {
                     Picasso.get().load(user.getImage()).into(InputUserImage);
                     InputUserIdentification.setText(user.getIdentification());
                     InputUserCompany.setText(user.getCompany());
-                } else {
-                    startActivity(new Intent(getApplicationContext(), EditProfile.class));
                 }
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                startActivity(new Intent(getApplicationContext(), EditProfile.class));
             }
         });
 
