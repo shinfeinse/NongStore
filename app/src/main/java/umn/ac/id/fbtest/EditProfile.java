@@ -195,9 +195,7 @@ public class EditProfile extends AppCompatActivity {
         {
             ImageUri = data.getData();
             InputUserImage.setImageURI(ImageUri);
-        }
-
-        if(requestCode==CameraPick  &&  resultCode==RESULT_OK  &&  data!=null)
+        } else if(requestCode==CameraPick  &&  resultCode==RESULT_OK  &&  data!=null)
         {
             File f = new File(currentPhotoPath);
             ImageUri = Uri.fromFile(f);
@@ -212,11 +210,7 @@ public class EditProfile extends AppCompatActivity {
         Identification = InputUserIdentification.getText().toString();
         Company = InputUserCompany.getText().toString();
 
-        if (ImageUri == null)
-        {
-            Toast.makeText(this, "User image is mandatory...", Toast.LENGTH_SHORT).show();
-        }
-        else if (TextUtils.isEmpty(Name))
+        if (TextUtils.isEmpty(Name))
         {
             Toast.makeText(this, "Please write user display name...", Toast.LENGTH_SHORT).show();
         }
@@ -230,7 +224,13 @@ public class EditProfile extends AppCompatActivity {
         }
         else
         {
-            StoreUserInformation();
+            if (ImageUri == null)
+            {
+                StoreUserInformationNoImage();
+            } else {
+                StoreUserInformation();
+            }
+
         }
     }
 
@@ -239,7 +239,7 @@ public class EditProfile extends AppCompatActivity {
     private void StoreUserInformation()
     {
         loadingBar.setTitle("Saving your profile");
-        loadingBar.setMessage("Please wait while we're saving yourprofile");
+        loadingBar.setMessage("Please wait while we're saving your profile");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
 
@@ -292,7 +292,66 @@ public class EditProfile extends AppCompatActivity {
         });
     }
 
+    private void StoreUserInformationNoImage()
+    {
+        loadingBar.setTitle("Saving your profile");
+        loadingBar.setMessage("Please wait while we're saving your profile");
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.show();
 
+        SaveUserInfoToDatabaseNoImage();
+    }
+
+    private void SaveUserInfoToDatabaseNoImage()
+    {
+        HashMap<String, Object> userMap = new HashMap<>();
+        userMap.put("nama", Name);
+        userMap.put("identification", Identification);
+        userMap.put("company", Company);
+
+        HashMap<String, Object> companyMap = new HashMap<>();
+        companyMap.put("nama", Name);
+        companyMap.put("identification", Identification);
+
+        UserRef.child(Uid).updateChildren(userMap)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task)
+                    {
+                        if (task.isSuccessful())
+                        {
+                            CompanyRef.child(Company).child(Uid).updateChildren(companyMap)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task)
+                                        {
+                                            if (task.isSuccessful())
+                                            {
+                                                Toast.makeText(EditProfile.this, "Data added to company successfully..", Toast.LENGTH_SHORT).show();
+                                                loadingBar.dismiss();
+                                                Intent intent = new Intent(EditProfile.this, HomeActivity.class);
+                                                startActivity(intent);
+                                            }
+                                            else
+                                            {
+                                                loadingBar.dismiss();
+                                                String message = task.getException().toString();
+                                            }
+                                        }
+                                    });
+
+                            loadingBar.dismiss();
+                            Toast.makeText(EditProfile.this, "Profile is updated successfully..", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            loadingBar.dismiss();
+                            String message = task.getException().toString();
+                            Toast.makeText(EditProfile.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
 
     private void SaveUserInfoToDatabase()
     {
@@ -323,6 +382,9 @@ public class EditProfile extends AppCompatActivity {
                                             {
                                                 Toast.makeText(EditProfile.this, "Data added to company successfully..", Toast.LENGTH_SHORT).show();
                                                 loadingBar.dismiss();
+                                                Intent intent = new Intent(EditProfile.this, HomeActivity.class);
+                                                startActivity(intent);
+
                                             }
                                             else
                                             {
@@ -331,8 +393,6 @@ public class EditProfile extends AppCompatActivity {
                                             }
                                         }
                                     });
-                            Intent intent = new Intent(EditProfile.this, HomeActivity.class);
-                            startActivity(intent);
 
                             loadingBar.dismiss();
                             Toast.makeText(EditProfile.this, "Profile is updated successfully..", Toast.LENGTH_SHORT).show();
