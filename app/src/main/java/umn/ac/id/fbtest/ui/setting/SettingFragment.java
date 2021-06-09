@@ -87,7 +87,7 @@ public class SettingFragment extends Fragment {
         });
         Switch switches = (Switch) view.findViewById(R.id.mode);
         sharedPreferences = this.getActivity().getSharedPreferences("night", 0);
-        Boolean booleanValue = sharedPreferences.getBoolean("night_mode", true);
+        Boolean booleanValue = sharedPreferences.getBoolean("night_mode", false);
         if(booleanValue){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             switches.setChecked(true);
